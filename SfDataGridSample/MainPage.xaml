@@ -16,11 +16,15 @@
         </Style>
     </ContentPage.Resources>
 
-    <syncfusion:SfDataGrid ItemsSource="{Binding Employees}" CellTapped="SfDataGrid_CellTapped">
+    <syncfusion:SfDataGrid ItemsSource="{Binding Employees}"
+                           CellTapped="SfDataGrid_CellTapped" 
+                           GridLinesVisibility="Both" 
+                           HeaderGridLinesVisibility="Both">
         <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn MappingName="EmployeeID" 
-                                              HeaderText="Employee ID" 
+            <syncfusion:DataGridNumericColumn MappingName="EmployeeID" Format="d"
+                                              HeaderText="Employee ID" ColumnWidthMode="Auto" 
                                               CellStyle="{StaticResource customCellStyle}"/>
+            <syncfusion:DataGridTextColumn MappingName="Name" HeaderText="Name" ColumnWidthMode="Auto"/>
             <syncfusion:DataGridCheckBoxColumn MappingName="EmployeeStatus" HeaderText="Status"/>
         </syncfusion:SfDataGrid.Columns>
     </syncfusion:SfDataGrid>

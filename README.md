@@ -2,7 +2,7 @@
 
 The [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) provides support to customize the background of a [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) based on a bool value.
 
-## XAML
+##### XAML
 We create a custom style targetting the DataGridCell in the Resource Dictionary.
 
 ```XML
@@ -20,12 +20,13 @@ Then we set the key value to the CellStyle property of the particular column we 
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn MappingName="EmployeeID" 
                                           HeaderText="Employee ID" 
-                                          CellStyle="{StaticResource customCellStyle}"/>
-        <syncfusion:DataGridCheckBoxColumn MappingName="EmployeeStatus" HeaderText="Status"/>
+                                          Format="d"
+                                          ColumnWidthMode="Auto"
+                                          CellStyle="{StaticResource customCellStyle}"/>        
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 ```
-## C#
+##### C#
 
 In the cell tapped event we will modify the bool value, which will trigger the converter.
 ```C#
@@ -65,7 +66,7 @@ The following GIF demonstrates the customization of datagrid cell background bas
 Take a moment to pursue this [documentation](https://help.syncfusion.com/maui/datagrid/overview), where you can find more about Syncfusion .NET MAUI DataGrid (SfDataGrid) with code examples.
 Please refer to this [link](https://www.syncfusion.com/maui-controls/maui-datagrid) to learn about the essential features of Syncfusion .NET MAUI DataGrid(SfDataGrid).
 
-### Conclusion
+#### Conclusion
 I hope you enjoyed learning about how to change the datagrid cell background based on bool value in .NET MAUI DataGrid?
 
 You can refer to our [.NET MAUI DataGrid's feature tour](https://www.syncfusion.com/maui-controls/maui-datagrid) page to know about its other groundbreaking feature representations. You can also explore our .NET MAUI DataGrid Documentation to understand how to present and manipulate data.
